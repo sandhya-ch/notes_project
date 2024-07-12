@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Notes</title>
+</head>
+<body>
+    <h2>My Notes</h2>
+    <ul>
+        {% for note in notes %}
+            <li><a href="{% url 'note_detail' note.pk %}">{{ note.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <div>
+        {% if is_paginated %}
+            <div>
+                <span>
+                    Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+                </span>
+
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    <a href="{% url 'note_create' %}">Create a new note</a>
+</body>
+</html>
+
