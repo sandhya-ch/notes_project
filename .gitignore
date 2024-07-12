@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+*.swp
+
+# If your build process includes running collectstatic, then you probably don't need or want to include staticfiles
+/staticfiles
+/static/
+*.db
+
+# Local virtual environment
+venv/
+ENV/
+env/
+.venv/
+env.bak/
+venv.bak/
+
+# Docker
+*.db
+*.local
+*.pid
+*.tar.gz
+*.log
+__pycache__/
+media/
+static/
+venv/
+docker-compose.override.yml
+.env
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.pydevproject
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Test logs
+*.log
